@@ -1,9 +1,75 @@
-* {
-    margin: 0;
-    box-sizing: border-box;
+:root {
+    --primary-red: hsl(4, 100%, 67%);
+    --neutral-blue800: hsl(234, 29%, 20%);
+    --neutral-blue700: hsl(235, 18%, 26%);
+    --neutral-gray: hsl(0, 0%,58%);
+    --neutral-white: hsl(0, 0%, 100%);
+    --padding: 2rem;
+}
+/* ------------------- */
+/* Reset               */
+/* ------------------- */
 
+/* 1. Use a more-intuitive box-sizing model */
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+/* 2. Remove default margin */
+* {
+  margin: 0;
 }
 
 body {
-     font-family: "Roboto", sans-serif;
+  /* 3. Add accessible line-height */
+  line-height: 1.5;
+  /* 4. Improve centering within parent */
+  min-height: 100vh;
+  font-family: "Roboto", sans-serif;
+     font-size: 1rem; 
+     display: flex;
+     flex-direction: column;
+     justify-content: center;
+     align-items: center;
+     
+	
+}
+
+/* 5. Improve media defaults */
+img, picture, video, canvas, svg {
+  display: block;
+  max-width: 100%;
+}
+
+/* 6. Inherit fonts for form controls */
+input, button, textarea, select {
+  font: inherit;
+}
+
+/* 7. Avoid text overflows */
+p, h1, h2, h3, h4, h5, h6 {
+  overflow-wrap: break-word;
+}
+
+
+.container {
+    display: flex;
+     flex-direction: column;
+     justify-content: center;
+     align-items: center;
+     width: 15rem;
+     border: 3px dashed blue;
+     
+  
+}
+
+.illustration-sign-up-mobile {
+
+}
+
+@media (min-width: 750px) {
+    
+    body {
+        background-color: aqua;
+    }
 }
