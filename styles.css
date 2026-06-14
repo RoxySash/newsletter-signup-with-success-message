@@ -1,17 +1,24 @@
 :root {
-    --primary-red: hsl(4, 100%, 67%);
-    --neutral-blue800: hsl(234, 29%, 20%);
-    --neutral-blue700: hsl(235, 18%, 26%);
-    --neutral-gray: hsl(0, 0%,58%);
-    --neutral-white: hsl(0, 0%, 100%);
-    --padding: 2rem;
+  --primary-red: hsl(4, 100%, 67%);
+  --neutral-blue800: hsl(234, 29%, 20%);
+  --neutral-blue700: hsl(235, 18%, 26%);
+  --neutral-gray: hsl(0, 0%, 58%);
+  --neutral-white: hsl(0, 0%, 100%);
+  --padding-1: 0.2rem;
+  --padding: 1.5rem;
+  --padding-2: 2rem;
+  --fontsmall: 0.79rem;
+  --fontmedium: 0.9rem;
+  --padding-3: 1.4rem;
 }
 /* ------------------- */
 /* Reset               */
 /* ------------------- */
 
 /* 1. Use a more-intuitive box-sizing model */
-*, *::before, *::after {
+*,
+*::before,
+*::after {
   box-sizing: border-box;
 }
 
@@ -24,52 +31,139 @@ body {
   /* 3. Add accessible line-height */
   line-height: 1.5;
   /* 4. Improve centering within parent */
-  min-height: 100vh;
+  /*min-height: 100vh; removing this put image at top*/
   font-family: "Roboto", sans-serif;
-     font-size: 1rem; 
-     display: flex;
-     flex-direction: column;
-     justify-content: center;
-     align-items: center;
-     
-	
+  font-size: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border: 5px solid pink;
 }
 
 /* 5. Improve media defaults */
-img, picture, video, canvas, svg {
+img,
+picture,
+video,
+canvas,
+svg {
   display: block;
   max-width: 100%;
 }
 
 /* 6. Inherit fonts for form controls */
-input, button, textarea, select {
+input,
+button,
+textarea,
+select {
   font: inherit;
 }
 
 /* 7. Avoid text overflows */
-p, h1, h2, h3, h4, h5, h6 {
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   overflow-wrap: break-word;
 }
 
-
 .container {
-    display: flex;
-     flex-direction: column;
-     justify-content: center;
-     align-items: center;
-     width: 15rem;
-     border: 3px dashed blue;
-     
-  
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: var(--padding);
 }
 
 .illustration-sign-up-mobile {
+  width: 100%;
+}
+
+.succes-list {
+  display: flex;
+  flex-direction: row;
+  justify-content: left;
+  align-self: center;
+  padding: var(--padding-1);
 
 }
 
+.succes-list img {
+  padding-right: var(--padding);
+}
+
+.succes-list p {
+  color: var(--neutral-blue700);
+  font-weight: 400;
+}
+
+.product-info {
+  color: var(--neutral-blue700);
+}
+
+.headings {
+  color: var(--neutral-blue800);
+}
+
+#modal {
+  display: none;
+}
+
+#email {
+  width: 100%;
+  padding: var(--padding-3);
+  height: 2rem;
+  border-radius: 10px;
+  border: 2px solid var(--neutral-gray);
+}
+
+#submit-btn {
+  padding: var(--padding-1);
+  height: 2rem;
+  width: 100%;
+  background-color: var(--neutral-blue800);
+  padding: var(--padding-3);
+  border-radius: 10px;
+  border: none;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  color: var(--neutral-white);
+  font-size: var(--fontmedium);
+}
+
+.buttons {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.label-email {
+  text-align: left;
+  font-size: var(--fontsmall);
+  font-weight: 500;
+}
+
+.email-section {
+  margin-bottom: var(--fontmedium);
+  width: 100%;
+  color: var(--neutral-blue800);
+}
+
+#modal {
+    width: 15.31rem;
+}
 @media (min-width: 750px) {
-    
-    body {
-        background-color: aqua;
-    }
+  body {
+    background-color: aqua;
+  }
+
+  .illustration-sign-up-mobile {
+    display: none;
+  }
 }
