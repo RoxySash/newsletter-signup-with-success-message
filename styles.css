@@ -149,6 +149,21 @@ h6 {
   font-weight: 500;
 }
 
+input:invalid {
+  border-color: var(--primary-red);
+  border: 2px solid var(--primary-red);
+}
+
+.error-message {
+  color: var(--primary-red);
+}
+
+.error-message:empty {
+  display: none;
+  padding: 1rem;
+  background-color: var(--primary-red);
+}
+
 .email-section {
   margin-bottom: var(--fontmedium);
   width: 100%;

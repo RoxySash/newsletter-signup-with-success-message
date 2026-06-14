@@ -3,17 +3,37 @@ const form = document.getElementById('form');
 const submitBtn = document.getElementById('submit-btn');
 const modal = document.getElementById('modal');
 
-function handleSubmit(e) {
-    e.preventDefault();
-    const data = Object.fromEntries(new FormData(e.target));
+function validateEmail(field) {
+  const errorEl = field.parentElement.querySelector('.error-message');
+   if(!field.validity.valid) {
+    errorEl.textContent = "Valid email required";
+    return false
+   }
+
+return true;
 }
 
-form.addEventListener('submit', handleSubmit);
 
-submitBtn.addEventListener("click", function(){
-  //  alert('Button Clicked');
-    modal.showModal();
-    // add the function for the error or change modal 
-});
+form.addEventListener('submit', function (e) {
+  e.preventDefault();
 
+  let isValid = true;
+
+  const fields = form.querySelectorAll('input');
+
+  fields.forEach(field => {
+  
+    const fieldValid = validateEmail(field);
+    if(!fieldValid) {
+      isValid = false;
+    }
+  })
+
+  if(isValid) {
+    console.log("submitting")
+  } else {
+    console.log("error")
+  }
+
+})
 

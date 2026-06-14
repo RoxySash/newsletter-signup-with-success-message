@@ -44,7 +44,7 @@
     <main class="container">
       <!-- Sign-up form start -->
 
-      <form action="/" method="GET" id="form">
+      <form action="/" method="GET" id="form" novalidate>
         <div id="signup">
           <h1 class="headings">Stay updated!</h1>
 
@@ -80,6 +80,7 @@
         <div class="buttons">
         <div class="email-section">
           <label class="label-email" for="email">Email address</label>
+          <span class="error-message" aria-live="polite"></span>
           <input
             id="email"
             name="email"
@@ -106,9 +107,7 @@
       </form>
       <div class="attribution">
         Challenge by
-        <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
-          >Frontend Mentor</a
-        >. Coded by <a href="#">Roxane Hedge</a>.
+        <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. Coded by <a href="#">Roxane Hedge</a>
       </div>
     </main>
   </body>
