@@ -10,6 +10,9 @@
   --fontsmall: 0.79rem;
   --fontmedium: 0.9rem;
   --padding-3: 1.4rem;
+  --padding-one: 1rem;
+   --primary-pink: rgb(255, 193, 188);
+   --pink-orange-gradient:  linear-gradient(to left, #ff9933 0%, #ff0066 100%);
 }
 /* ------------------- */
 /* Reset               */
@@ -108,9 +111,6 @@ h6 {
   color: var(--neutral-blue800);
 }
 
-#modal {
-  display: none;
-}
 
 #email {
   width: 100%;
@@ -120,7 +120,7 @@ h6 {
   border: 2px solid var(--neutral-gray);
 }
 
-#submit-btn {
+.deco-btn {
   padding: var(--padding-1);
   height: 2rem;
   width: 100%;
@@ -134,6 +134,14 @@ h6 {
   align-items: center;
   color: var(--neutral-white);
   font-size: var(--fontmedium);
+
+ 
+}
+
+.deco-btn:hover {
+  cursor: pointer;
+  transition: 2s;
+  background: var(--pink-orange-gradient);
 }
 
 .buttons {
@@ -150,12 +158,15 @@ h6 {
 }
 
 input:invalid {
-  border-color: var(--primary-red);
-  border: 2px solid var(--primary-red);
+ 
+ 
+  background-color: var(--primary-pink);
 }
 
 .error-message {
   color: var(--primary-red);
+  font-size: var(--fontsmall);
+  
 }
 
 .error-message:empty {
@@ -170,9 +181,52 @@ input:invalid {
   color: var(--neutral-blue800);
 }
 
-#modal {
-    width: 15.31rem;
+.email-modal {
+  color: var(--neutral-blue800);
+  font-weight: 600;
 }
+
+.modal-container {
+ /* display: none; */
+}
+
+.success-check {
+  padding-bottom: var(--padding-2);
+}
+.headings {
+  padding-bottom: var(--padding-1);
+}
+.modal-text {
+  color: var(--neutral-blue700);
+}
+.modal-container {
+  top: 0;
+  left: 0;
+  position: fixed; 
+  background-color: var(--neutral-blue700);
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  
+}
+.modal {
+background-color: var(--neutral-white);
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+justify-content: space-between;
+align-items: center;
+max-width: 100%;
+padding: var(--padding-2);
+padding-top: 10rem;
+}
+
+
+
 @media (min-width: 750px) {
   body {
     background-color: aqua;
@@ -181,4 +235,39 @@ input:invalid {
   .illustration-sign-up-mobile {
     display: none;
   }
+
+.modal-container {
+  top: 0;
+  left: 0;
+  position: fixed; 
+  background-color: var(--neutral-blue700);
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  
+}
+.modal {
+background-color: var(--neutral-white);
+width: 23.31rem;
+max-width: 100%;
+padding: var(--padding-2);
+border-radius: 1.59rem;
+height: 27rem;
+}
+
+.pad {
+  padding-bottom: var(--padding-one);
+}
+.headings {
+  padding-bottom: var(--padding-one);
+}
+
+.deco-btn {
+ margin-top: var(--padding-one);
+}
+
 }

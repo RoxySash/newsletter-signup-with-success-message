@@ -89,18 +89,30 @@
             placeholder="email@company.com"
           />
         </div>
-        <button id="submit-btn" type="submit">
+        <button id="submit-btn" type="submit" class="deco-btn">
           Subscribe to monthly newsletter
         </button>
       </div>
         <!-- Sign-up form end -->
 
         <!-- Success message start -->
-        <div id="modal">
+
+        <div class="modal-container" id="modal_container">
+          <div class="modal">
+          <div>
+          <img
+          src="./assets/images/icon-success.svg"
+          alt="success checkmark"
+          class="success-check"
+          >
         <h1 class="headings">Thanks for subscribing!</h1>
-         <p>A confirmation email has been sent to
-        <span>ash@loremcompany.com</span>. Please open it and click the button inside to
-        confirm your subscription. Dismiss message</p>
+         <p class="modal-text">A confirmation email has been sent to
+        <span class="email-modal">ash@loremcompany.com</span>. Please open it and click the button inside to
+        confirm your subscription.</p>
+        </div> 
+       
+        <div id="close" class="deco-btn">Dismiss message</div>
+        </div>
         </div>
 
         <!-- Success message end -->

@@ -1,7 +1,7 @@
 const email = document.getElementById('email');
 const form = document.getElementById('form');
 const submitBtn = document.getElementById('submit-btn');
-const modal = document.getElementById('modal');
+const modal = document.getElementById('modal-container');
 
 function validateEmail(field) {
   const errorEl = field.parentElement.querySelector('.error-message');
@@ -9,10 +9,14 @@ function validateEmail(field) {
     errorEl.textContent = "Valid email required";
     return false
    }
-
+ errorEl.textContent = "";
 return true;
 }
 
+form.querySelectorAll('input').forEach(input => {
+  input.addEventListener('blur', () => {
+    validateEmail(input)})
+})
 
 form.addEventListener('submit', function (e) {
   e.preventDefault();
@@ -29,10 +33,31 @@ form.addEventListener('submit', function (e) {
     }
   })
 
+
+
+async function sendData() {
+
+  const formData = new FormData(form);
+
+  try {
+    const response = await fetch("", {
+      method: "POST",
+      body: formData,
+    });
+    console.log(await response.json());
+  } catch (e) {
+    console.error(e);
+  }
+}
+
+
   if(isValid) {
-    console.log("submitting")
+    sendData();
+    // modal pops up
+    form.reset();
   } else {
-    console.log("error")
+    
+    form.querySelector('invalid').focus();
   }
 
 })
