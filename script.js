@@ -2,6 +2,8 @@ const email = document.getElementById('email');
 const form = document.getElementById('form');
 const submitBtn = document.getElementById('submit-btn');
 const modal = document.getElementById('modal-container');
+const close = document.getElementById('close');
+
 
 function validateEmail(field) {
   const errorEl = field.parentElement.querySelector('.error-message');
@@ -51,9 +53,16 @@ async function sendData() {
 }
 
 
+submitBtn.addEventListener('click', () => {
+    modal_container.classList.add;
+   })
+   close.addEventListener('click', () => {
+    modal_container.classList.remove('show');
+   })
+
   if(isValid) {
     sendData();
-    // modal pops up
+   
     form.reset();
   } else {
     
