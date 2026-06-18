@@ -208,7 +208,7 @@ input:invalid {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  display: none;
+  
 
   
 }
@@ -258,6 +258,7 @@ max-width: 100%;
 padding: var(--padding-2);
 border-radius: 1.59rem;
 height: 25rem;
+
 }
 
 .pad {
