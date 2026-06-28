@@ -1,5 +1,4 @@
 const form = document.getElementById("form");
-const submitBtn = document.getElementById("submit-btn");
 const dialogElem = document.getElementById("modal_container");
 const closeBtn = document.getElementById("close");
 
@@ -7,7 +6,7 @@ closeBtn.addEventListener("click", closeModalFn)
 
 
 function openModalFn() {
-  dialogElem.style.display = "block";
+  dialogElem.style.display = "flex";
 }
 function closeModalFn (){
   dialogElem.style.display = "none";
@@ -49,11 +48,11 @@ form.addEventListener("submit", function (e) {
   });
 
   if (isValid) {
-    // send form data
+ 
     openModalFn();
     form.reset();
   } else {
-    form.querySelector("input:invalid").focus();
+    form.querySelector("email:invalid").focus();
   };
 
 });
