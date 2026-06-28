@@ -36,7 +36,7 @@ body {
   /* 4. Improve centering within parent */
   /*min-height: 100vh; removing this put image at top*/
   font-family: "Roboto", sans-serif;
-  font-size: clamp(1rem, 1.5vw, 1.11rem);
+  font-size: 1rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
