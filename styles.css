@@ -231,7 +231,7 @@ h6 {
 
   .container {
     width: 70%;
-    max-width: 850px;
+    max-width: 750px;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -249,7 +249,7 @@ h6 {
   }
 
   #form {
-    border: 2px dotted pink;
+    
 
     margin-left: 20px;
     margin-right: 20px;
