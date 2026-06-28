@@ -39,7 +39,6 @@ form.addEventListener('submit', function (e) {
 })
 
 async function sendData() {
-
   const formData = new FormData(form);
 
   try {
