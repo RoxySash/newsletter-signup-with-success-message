@@ -35,11 +35,11 @@ Users should be able to:
 ### Screenshot
 
 ![Mobile version](./assets/images/Screenshot%20Mobile%20Version.png)
-![Mobile version](./assets/images/Screenshot%20Mobile%20Success%20Message.png)
-![Mobile version](./assets/images/Screenshot%20Failed%20Validation.png)
-![Mobile version](./assets/images/Screenshot%20Desktop%20Version.png)
-![Mobile version](./assets/images/Screenshot%20Desktop%20Success%20Message.png)
-![Mobile version](./assets/images/Screenshot%20But%20Click%20hover%20state%20and%20Error.png)
+![Mobile Success Message](./assets/images/Screenshot%20Mobile%20Success%20Message.png)
+![Failed Validation](./assets/images/Screenshot%20Failed%20Validation.png)
+![Desktop Version](./assets/images/Screenshot%20Desktop%20Version.png)
+![Desktop Success Message](./assets/images/Screenshot%20Desktop%20Success%20Message.png)
+![Hover States](./assets/images/Screenshot%20But%20Click%20hover%20state%20and%20Error.png)
 
 ### Links
 
