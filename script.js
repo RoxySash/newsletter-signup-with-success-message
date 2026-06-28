@@ -1,72 +1,59 @@
-const email = document.getElementById('email');
-const form = document.getElementById('form');
-const submitBtn = document.getElementById('submit-btn');
-const dialogElem = document.getElementById('modal_container');
-const closeBtn = document.getElementById('close');
+const form = document.getElementById("form");
+const submitBtn = document.getElementById("submit-btn");
+const dialogElem = document.getElementById("modal_container");
+const closeBtn = document.getElementById("close");
 
+closeBtn.addEventListener("click", closeModalFn)
+
+
+function openModalFn() {
+  dialogElem.style.display = "block";
+}
+function closeModalFn (){
+  dialogElem.style.display = "none";
+}
 
 
 function validateEmail(field) {
-  const errorEl = field.parentElement.querySelector('.error-message');
-   if(!field.validity.valid) {
+  const errorEl = field.parentElement.querySelector(".error-message");
+
+  if (!field.validity.valid) {
     errorEl.textContent = "Valid email required";
-    return false
-   }
- errorEl.textContent = "";
-return true;
+    return false;
+  }
+  errorEl.textContent = "";
+  return true;
 }
 
-form.querySelectorAll('input').forEach(input => {
-  input.addEventListener('blur', () => {
-    validateEmail(input)})
-})
+form.querySelectorAll("input").forEach((input) => {
+  input.addEventListener("blur", () => {
+    validateEmail(input);
+  });
+});
 
-form.addEventListener('submit', function (e) {
+
+
+form.addEventListener("submit", function (e) {
   e.preventDefault();
 
   let isValid = true;
 
-  const fields = form.querySelectorAll('input');
+  const fields = form.querySelectorAll("input");
 
-  fields.forEach(field => {
-  
+  fields.forEach((field) => {
     const fieldValid = validateEmail(field);
-    if(!fieldValid) {
+
+    if (!fieldValid) {
       isValid = false;
-    }
-  })
+    };
+  });
 
-})
-
-async function sendData() {
-  const formData = new FormData(form);
-
-  try {
-    const response = await fetch("", {
-      method: "POST",
-      body: formData,
-    });
-    console.log(await response.json());
-  } catch (e) {
-    console.error(e);
-  }
-}
-
-
-submitBtn.addEventListener('click', () => {
- 
-
-  if(isValid) {
+  if (isValid) {
+    // send form data
+    openModalFn();
     form.reset();
   } else {
-    
-    form.querySelector('invalid').focus();
-  }
+    form.querySelector("input:invalid").focus();
+  };
 
-  dialogElem.showModal();
-  
-})
-
-closeBtn.addEventListener('click', () => {
-  dialogElem.close();
-})
+});
