@@ -16,7 +16,6 @@ This is a solution to the [Newsletter sign-up form with success message challeng
 - [Author](#author)
 - [Acknowledgments](#acknowledgments)
 
-**Note: Delete this note and update the table of contents based on what sections you keep.**
 
 ## Overview
 
@@ -53,16 +52,14 @@ Users should be able to:
 - Semantic HTML5 markup
 - CSS custom properties
 - Flexbox
-- CSS Grid
 - Mobile-first workflow
-- [React](https://reactjs.org/) - JS library
-- [Next.js](https://nextjs.org/) - React framework
-- [Styled Components](https://styled-components.com/) - For styles
+- Vanilla JS
+
 
 
 ### What I learned
 
-Use this section to recap over some of your major learnings while working through this project. Writing these out and providing code samples of areas you want to highlight is a great way to reinforce your own knowledge.
+I learned alot about modals and validation. Working with the modal submission was fun and I accepted the challenge.
 
 To see how you can add code snippets, see below:
 
@@ -70,29 +67,36 @@ To see how you can add code snippets, see below:
 <h1>Some HTML code I'm proud of</h1>
 ```
 ```css
-.proud-of-this-css {
-  color: papayawhip;
+.modal-container {
+  top: 0;
+  left: 0;
+  position: fixed;
+
+  background-color: var(--neutral-blue700);
+  z-index: 10;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 ```
 ```js
-const proudOfThisFunc = () => {
-  console.log('🎉')
+function openModalFn() {
+  dialogElem.style.display = "flex";
+}
+function closeModalFn (){
+  dialogElem.style.display = "none";
 }
 ```
 
-If you want more help with writing markdown, we'd recommend checking out [The Markdown Guide](https://www.markdownguide.org/) to learn more.
-
-
 ### Continued development
 
-Use this section to outline areas that you want to continue focusing on in future projects. These could be concepts you're still not completely comfortable with or techniques you found useful that you want to refine and perfect.
+Faster completion for challenges. I will do more JS challenges.
 
 ### Useful resources
 
 - [How to set custom error messages for your HTML forms by Kevin Powell
 ](https://youtu.be/h5qqmE83Tes?si=Tu50Ya75J6OMWIKW) - This helped me for form validation. I really liked this pattern and will use it going forward.
-
-
 
 
 ## Author
